@@ -233,6 +233,28 @@
             border-bottom: 1px solid var(--border-color);
         }
 
+        .profile-photo {
+            width: 300px;
+            height: 326px;
+            object-fit: cover;
+            border-radius: 10px;
+            float: right;
+            margin-left: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* On narrow screens a floated photo leaves a sliver of text
+           beside it, so center it above the paragraph instead. */
+        @media (max-width: 768px) {
+            .profile-photo {
+                float: none;
+                display: block;
+                width: 240px;
+                height: 261px;
+                margin: 0 auto 24px;
+            }
+        }
+
         .research-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -250,6 +272,25 @@
             font-size: 20px;
         }
 
+
+        .software-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+        }
+
+        .software-list li {
+            margin-bottom: 14px;
+            padding-bottom: 14px;
+            line-height: 1.6;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .software-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
 
         .contact-info {
             line-height: 1.6;
@@ -306,6 +347,7 @@
             <nav class="site-nav">
                 <a href="#about">About</a>
                 <a href="#research">Research</a>
+                <a href="#software">Software</a>
                 <a href="#group">Group</a>
                 <a href="#contact">Contact</a>
                 <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
@@ -317,7 +359,7 @@
         <div class="wrapper">
             <section id="about" class="section">
                 <h2>About</h2>
-                <img src="conroy.jpg" alt="Charlie Conroy" style="width: 220px; height: 250px; border-radius: 10px; object-fit: cover; float: right; margin-left: 20px; margin-bottom: 20px;">
+                <img src="conroy.jpg" alt="Charlie Conroy" class="profile-photo">
                 <div class="intro">
                     I am a Professor of Astronomy at Harvard University and the Director of the Institute for Theory and Computation (ITC) at the Center for Astrophysics (CfA). In 2013 I was awarded an Alfred P. Sloan Research Fellowship and a Packard Fellowship in Science and Engineering and in 2017 I was awarded the Helen B. Warner Prize from the AAS.  In 2025 I was selected as a Finalist for the Blavatnik National Awards for Young Scientists.  My research group studies a broad range of topics in the fields of dark matter, galaxy formation, stellar evolution, and stellar populations.
                 </div>
@@ -354,6 +396,18 @@
                 </div>
             </section>
 
+<section id="software" class="section">
+    <h2>Software</h2>
+    <p>My group develops and maintains several open-source codes:</p>
+    <ul class="software-list">
+        <li><a href="https://github.com/cconroy20/fsps" target="_blank" rel="noopener"><strong>FSPS</strong></a> &mdash; Flexible Stellar Population Synthesis: a Fortran package for computing the spectra and photometry of stellar populations.</li>
+        <li><a href="https://github.com/cconroy20/alf" target="_blank" rel="noopener"><strong>alf</strong></a> &mdash; Absorption Line Fitter: full-spectrum fitting of integrated-light spectra to measure ages, elemental abundances, and the stellar IMF.</li>
+        <li><a href="https://github.com/bd-j/prospector" target="_blank" rel="noopener"><strong>Prospector</strong></a> &mdash; Python code for stellar population inference from spectra and SEDs.</li>
+        <li><a href="https://github.com/cconroy20/atlas12" target="_blank" rel="noopener"><strong>ATLAS12 / SYNTHE</strong></a> &mdash; Fortran 90 translation of Kurucz's stellar atmosphere and spectral synthesis codes.</li>
+    </ul>
+</section>
+
+
 <section id="group" class="section">
     <h2>Research Group</h2>
     
@@ -365,14 +419,14 @@
                 <li><a href="https://www.cfa.harvard.edu/~pcargile/">Phill Cargile</a> (Research Scientist)</li>
                 <li><a href="https://vadimsemenov.com/">Vadim Semenov</a> (Hubble & ITC Fellow)</li>
                 <li><a href="https://www.scottlucchini.com/">Scott Lucchini</a> (ITC Fellow)</li>
-                <li><a href="https://shelleycheng.com/">Shelley Cheng</a> (PhD Student)</li>
+                <li><a href="https://jnibauer.github.io">Jake Nibauer</a> (ITC Fellow)</li>
             </ul>
         </div>
         
         <div class="group-member">
             <ul>
 
-                <li><a href="https://vedantchandra.com/">Vedant Chandra</a> (PhD Student)</li>
+                <li><a href="https://shelleycheng.com/">Shelley Cheng</a> (PhD Student)</li>
                 <li>Rebecca Woody (PhD Student)</li>
                 <li><a href="https://abigailgwhite.weebly.com/">Abby White</a> (PhD Student)</li>
                 <li><a href="https://anya-m-phillips.github.io">Anya Phillips</a> (PhD Student)</li>
@@ -401,11 +455,12 @@
                 <li>Seth Gossage (CIERA Fellow, Northwestern University)</li>
                 <li>Harshil Kamdar (Senior Scientist, Kairos Aerospace)</li>
                 <li>Sirio Belli (Assistant Professor, University of Bologna)</li>
-                <li>Rohan Naidu (Pappalardo & Hubble Fellow, MIT)</li>
+                <li>Rohan Naidu (Assistant Professor, University of Hawaii)</li>
                 <li>Lieke van Son (Assistant Professor, Radboud University)</li>
                 <li>Kareem El-Badry (Assistant Professor, Caltech)</li>
                 <li>Jesse Han (Stanford Science Fellow, Stanford)</li>
                 <li>MJ Park (Kavli Fellow, Cambridge University)</li>
+                <li>Vedant Chandra (Hubble Fellow, MIT)</li>
             </ul>
         </div>
     </div>
