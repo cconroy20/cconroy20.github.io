@@ -22,7 +22,7 @@
         }
 
         html {
-            scroll-padding-top: 130px;
+            scroll-padding-top: 86px;
         }
         
         * {
@@ -144,18 +144,6 @@
             font-size: 24px;
             font-weight: 600;
             line-height: 1.2;
-        }
-
-        .site-title .title {
-            display: block;
-            font-size: 14px;
-            font-weight: 400;
-            color: var(--text-light);
-            margin-top: 2px;
-        }
-
-        .site-title .affiliation {
-            margin-top: 0;
         }
 
         .site-nav {
@@ -296,28 +284,6 @@
             padding-bottom: 0;
         }
 
-        .pedagogy-item {
-            margin-bottom: 40px;
-        }
-
-        .pedagogy-item h3 {
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        .pedagogy-item p {
-            margin-bottom: 16px;
-        }
-
-        .pedagogy-video {
-            display: block;
-            width: 100%;
-            max-width: 560px;
-            height: auto;
-            border-radius: 8px;
-            background: #000;
-        }
-
         .contact-info {
             line-height: 1.6;
         }
@@ -330,7 +296,7 @@
         @media (max-width: 768px) {
             /* the header stacks here, so anchors need more clearance */
             html {
-                scroll-padding-top: 210px;
+                scroll-padding-top: 166px;
             }
 
             .wrapper {
@@ -372,8 +338,6 @@
         <div class="wrapper">
             <a class="site-title" href="#about">
                 <span class="name">Charlie Conroy</span>
-                <span class="title">Professor of Astronomy</span>
-                <span class="title affiliation">Harvard University</span>
             </a>
             
             <nav class="site-nav">
@@ -451,31 +415,11 @@
     </ul>
 
     <h3 class="subsection-title">Animations</h3>
-    <p>Short simulations built for teaching galactic dynamics, each illustrating a single idea.</p>
-
-    <div class="pedagogy-item">
-        <h3>Gravitational Collapse</h3>
-        <p>Five thousand particles, released from a regular lattice, collapse under their own gravity and violently relax into a single bound cluster.</p>
-        <video class="pedagogy-video" controls loop muted playsinline preload="none" poster="teaching/collapse_poster.jpg">
-            <source src="teaching/collapse.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="pedagogy-item">
-        <h3>Dynamical Friction</h3>
-        <p>A massive perturber moving through a uniform background gathers an overdense wake behind it. The gravitational pull of that wake is the drag force of dynamical friction.</p>
-        <video class="pedagogy-video" controls loop muted playsinline preload="none" poster="teaching/dynfric_poster.jpg">
-            <source src="teaching/dynfric.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="pedagogy-item">
-        <h3>Phase Mixing</h3>
-        <p>A compact group of stars in angle&ndash;angular velocity space shears out and winds into thin filaments, as stars orbiting at different rates steadily drift apart in phase.</p>
-        <video class="pedagogy-video" controls loop muted playsinline preload="none" poster="teaching/phase_mixing_poster.jpg">
-            <source src="teaching/phase_mixing.mp4" type="video/mp4">
-        </video>
-    </div>
+    <ul class="software-list">
+        <li><a href="teaching/collapse.mp4" target="_blank" rel="noopener"><strong>Gravitational Collapse</strong></a></li>
+        <li><a href="teaching/dynfric.mp4" target="_blank" rel="noopener"><strong>Dynamical Friction</strong></a></li>
+        <li><a href="teaching/phase_mixing.mp4" target="_blank" rel="noopener"><strong>Phase Mixing</strong></a></li>
+    </ul>
 </section>
 
 
