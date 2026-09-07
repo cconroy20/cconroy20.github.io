@@ -22,7 +22,7 @@
         }
 
         html {
-            scroll-padding-top: 100px;
+            scroll-padding-top: 130px;
         }
         
         * {
@@ -154,6 +154,10 @@
             margin-top: 2px;
         }
 
+        .site-title .affiliation {
+            margin-top: 0;
+        }
+
         .site-nav {
             display: flex;
             gap: 30px;
@@ -226,7 +230,7 @@
         }
 
         .intro {
-            font-size: 18px;
+            font-size: 17px;
             line-height: 1.7;
             margin-bottom: 40px;
             padding-bottom: 40px;
@@ -302,6 +306,11 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            /* the header stacks here, so anchors need more clearance */
+            html {
+                scroll-padding-top: 210px;
+            }
+
             .wrapper {
                 padding: 0 15px;
             }
@@ -341,7 +350,8 @@
         <div class="wrapper">
             <a class="site-title" href="#about">
                 <span class="name">Charlie Conroy</span>
-                <span class="title">Professor of Astronomy, Harvard University</span>
+                <span class="title">Professor of Astronomy</span>
+                <span class="title affiliation">Harvard U</span>
             </a>
             
             <nav class="site-nav">
